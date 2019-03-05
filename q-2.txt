@@ -2,7 +2,6 @@
 
 	Parameter-1 :- Input image (32 * 32 *3)
 	Parameter-2 :- Filter-1 (5 * 5 * 3 * 6)
-	Parameter-3 :- FilterCount
 
 2 What are the number of parameters in pooling operation? 
 
@@ -16,4 +15,4 @@
 
 4 Which operation consume most amount of memory?
  
-	Initial Concolution Layer
+	Initial Convolution Layer
