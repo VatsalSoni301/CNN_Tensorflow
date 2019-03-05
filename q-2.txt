@@ -1,7 +1,7 @@
 1 What are the number of parameters in 1st convolutional layers ? 
 
-	Parameter-1 :- Input image (32 * 32)
-	Parameter-2 :- Filter-1 (5 * 5 * 6)
+	Parameter-1 :- Input image (32 * 32 *3)
+	Parameter-2 :- Filter-1 (5 * 5 * 3 * 6)
 	Parameter-3 :- FilterCount
 
 2 What are the number of parameters in pooling operation? 
