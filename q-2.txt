@@ -1,18 +1,41 @@
 1 What are the number of parameters in 1st convolutional layers ? 
 
-	Parameter-1 :- Input image (256 * 256 * 4)
-	Parameter-2 :- Filter-1 (5 * 5 * 4 * 6)
+	Ans:- 456 (5*5*3*6 + 6) (filter size + bias)
 
 2 What are the number of parameters in pooling operation? 
 
-	Parameter-1 :- Pooling matrix (2 * 2)
-	Parameter-2 :- Input data(Output of convolution layer preceding it)
-	Parameter-3 :- stride (2)
+	Ans:- 0 (No trainable parameter needed)
 
 3 Which of the following operations contain most number of parameters?
  
-	Fully Connected Layer
+	Ans:- Fully Connected Layer
+	
+	CNN Layers		No Of Parameters
+
+	Convolution-1		456 (5*5*3*6 + 6)
+	Relu-1			4704 (28*28*6)
+	Pooling-1		0
+	Convolution-2		2416 (5*5*3*16+16)
+	Relu-2			1600 (16*10*10)
+	Pooling-2		0
+	FullyConnected-1 	48120 (400*120 + 120)
+	Sigmoid-1 		120
+	FullyConnected-2 	10164 (120*84 +84)
+	Sigmoid-2 		84
+	Sigmoid-3 		10
 
 4 Which operation consume most amount of memory?
  
-	Initial Convolution Layer
+	Ans:- Fully connected layer
+
+5 Try different activation functions and describe observations.
+
+- Relu performs better in cnn as compare to tanh and sigmoid.
+
+- ReLU is important because it does not saturate, the gradient is always high (equal to 1) if the neuron activates.
+As long as it is not a dead neuron, successive updates are fairly effective. ReLU is also very quick to evaluate.
+
+- Compare this to sigmoid or tanh, both of which saturate (if the input is very high or very low, the gradient is very, very small).
+
+
+
